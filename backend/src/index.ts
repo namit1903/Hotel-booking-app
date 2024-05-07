@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import "dotenv/config";
 import mongoose from 'mongoose';
-// import authRoutes from "./routes/auth.ts";
+import authRoutes from "./routes/auth";
 import userRoutes from "./routes/users";
 
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 //endpoints
-// app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
 app.get("/api/test",async(req, res) => {
