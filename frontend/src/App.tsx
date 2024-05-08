@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Layout from './layout/Layout'
+import Register from "./pages/Register";
 
 
 
@@ -30,8 +31,7 @@ const App =()=>{
           path="/register"
           element={
             <Layout>
-              k
-              {/* <Register /> */}
+              <Register />
             </Layout>
           }
         />
