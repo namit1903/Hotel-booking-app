@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import {UserType} from "../shared/types"
+import { UserType } from "../shared/types";
+
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
@@ -8,15 +9,13 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
 });
 
-//password encryption
-userSchema.pre("save",async function(next){
-  if(this.isModified("password")){
-  this.password=await bcrypt.hash(this.password,8);
+userSchema.pre("save", async function (next) {
+  if (this.isModified("password")) {
+    this.password = await bcrypt.hash(this.password, 8);
   }
   next();
-})
-//creating model out of schema
-const User=mongoose.model<UserType>('User',userSchema);
+});
+
+const User = mongoose.model<UserType>("User", userSchema);
 
 export default User;
-// module.exports=User;

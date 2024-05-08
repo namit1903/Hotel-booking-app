@@ -1,4 +1,3 @@
-//why we used this????
 export type UserType = {
   _id: string;
   email: string;

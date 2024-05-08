@@ -7,8 +7,7 @@ export default {
       padding: {
         md: "10rem",
       },
+    },
   },
-},
   plugins: [],
-}
-
+};
