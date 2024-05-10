@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,react
-
+.vscode
+dist
 ### Node ###
 # Logs
 logs
@@ -156,3 +157,5 @@ sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react
 backend/node_modules
+node_modules
+.env.e2e

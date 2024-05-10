@@ -18,7 +18,7 @@ cloudinary.config({
 });
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
-
+//3:53:00
 const app = express();
 app.use(cookieParser());
 app.use(express.json());

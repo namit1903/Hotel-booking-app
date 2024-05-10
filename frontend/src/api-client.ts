@@ -35,11 +35,11 @@ export const register = async (formData: RegisterFormData) => {
     throw new Error(responseBody.message);
   }
 };
-
+//sign in endpoint request
 export const signIn = async (formData: SignInFormData) => {
   const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
     method: "POST",
-    credentials: "include",
+    credentials: "include",//send coockies or not
     headers: {
       "Content-Type": "application/json",
     },
@@ -50,7 +50,7 @@ export const signIn = async (formData: SignInFormData) => {
   if (!response.ok) {
     throw new Error(body.message);
   }
-  return body;
+  return body;//server return data in body
 };
 
 export const validateToken = async () => {
